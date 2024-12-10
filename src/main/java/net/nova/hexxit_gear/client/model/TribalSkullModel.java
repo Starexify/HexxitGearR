@@ -9,7 +9,7 @@ import net.nova.hexxit_gear.HexxitGearR;
 
 public class TribalSkullModel extends BaseHelmetModel {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("tribal_skull"), "main");
-    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/models/armor/tribal_skull.png");
+    public static final String TEXTURE = HexxitGearR.rl("textures/models/armor/tribal_skull.png").toString();
 
     public TribalSkullModel(ModelPart root) {
         super(root);

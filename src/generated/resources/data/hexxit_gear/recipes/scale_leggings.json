@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "G#G",
+    "O O"
+  ],
+  "result": {
+    "item": "hexxit_gear:scale_leggings"
+  },
+  "show_notification": true
+}

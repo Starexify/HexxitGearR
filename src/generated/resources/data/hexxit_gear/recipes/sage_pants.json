@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "C": {
+      "item": "minecraft:cyan_wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "C#C",
+    "C C"
+  ],
+  "result": {
+    "item": "hexxit_gear:sage_pants"
+  },
+  "show_notification": true
+}

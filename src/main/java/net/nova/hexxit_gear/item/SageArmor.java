@@ -1,6 +1,5 @@
 package net.nova.hexxit_gear.item;
 
-import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,7 +10,7 @@ import net.minecraft.world.level.Level;
 import net.nova.hexxit_gear.HexxitGearR;
 
 public class SageArmor extends ArmorItem {
-    public SageArmor(Holder<ArmorMaterial> pMaterial, Type pType, Properties pProperties) {
+    public SageArmor(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 

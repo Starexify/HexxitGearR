@@ -4,8 +4,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.nova.hexxit_gear.data.worldgen.HGBiomeModifiers;
 import net.nova.hexxit_gear.data.worldgen.HGConfiguredFeatures;
 import net.nova.hexxit_gear.data.worldgen.HGPlacedFeatures;
@@ -20,7 +20,7 @@ public class DatapackProvider extends DatapackBuiltinEntriesProvider {
         super(output, lookupProvider, new RegistrySetBuilder()
                         .add(Registries.CONFIGURED_FEATURE, HGConfiguredFeatures::bootstrap)
                         .add(Registries.PLACED_FEATURE, HGPlacedFeatures::bootstrap)
-                        .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, HGBiomeModifiers::bootstrap),
+                        .add(ForgeRegistries.Keys.BIOME_MODIFIERS, HGBiomeModifiers::bootstrap),
                 Set.of(MODID));
     }
 }

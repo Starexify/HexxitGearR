@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "B#B",
+    "L L"
+  ],
+  "result": {
+    "item": "hexxit_gear:sage_walkers"
+  },
+  "show_notification": true
+}

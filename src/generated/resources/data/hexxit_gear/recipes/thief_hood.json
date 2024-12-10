@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "R": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "R#R"
+  ],
+  "result": {
+    "item": "hexxit_gear:thief_hood"
+  },
+  "show_notification": true
+}

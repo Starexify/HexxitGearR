@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "C": {
+      "item": "minecraft:cyan_wool"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "C#C"
+  ],
+  "result": {
+    "item": "hexxit_gear:sage_hood"
+  },
+  "show_notification": true
+}

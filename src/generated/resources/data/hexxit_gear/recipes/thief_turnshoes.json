@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "L#L",
+    "L L"
+  ],
+  "result": {
+    "item": "hexxit_gear:thief_turnshoes"
+  },
+  "show_notification": true
+}

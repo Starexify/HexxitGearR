@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "hexical_petal",
+  "ingredients": [
+    {
+      "item": "hexxit_gear:hexbiscus"
+    }
+  ],
+  "result": {
+    "item": "hexxit_gear:hexical_petal"
+  }
+}

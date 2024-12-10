@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "C#C",
+    "L L"
+  ],
+  "result": {
+    "item": "hexxit_gear:tribal_warboots"
+  },
+  "show_notification": true
+}

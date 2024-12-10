@@ -1,7 +1,7 @@
 package net.nova.hexxit_gear.data;
 
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.minecraftforge.common.data.LanguageProvider;
 import net.nova.hexxit_gear.init.CreativeTab;
 import net.nova.hexxit_gear.init.HGItems;
 

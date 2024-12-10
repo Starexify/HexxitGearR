@@ -2,17 +2,17 @@
 
 <p align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/hexxit-gear-r"><img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg"></a>
-  <a href="https://modrinth.com/mod/hexxit-gear-r"><img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg"></a>
+  <a href="https://modrinth.com/mod/hexxit-gear-rr"><img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg"></a>
 </p>
 
 <p align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/hexxit-gear-r"><img alt="CurseForge Downloads" src="https://img.shields.io/curseforge/dt/376883?style=for-the-badge&logo=curseforge&color=2C0AC8"></a>
-  <a href="https://modrinth.com/mod/hexxit-gear-r"><img alt="Modrinth Downloads" src="https://img.shields.io/modrinth/dt/rrDBjSL2?style=for-the-badge&logo=modrinth&color=2C0AC8"></a>
+  <a href="https://modrinth.com/mod/hexxit-gear-rr"><img alt="Modrinth Downloads" src="https://img.shields.io/modrinth/dt/hcdIfGgL?style=for-the-badge&logo=modrinth&color=2C0AC8"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Starexify/HexxiGearR/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
-  <a href="https://github.com/Starexify/HexxiGearR/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
+  <a href="https://github.com/Starexify/HexxitGearR/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
+  <a href="https://github.com/Starexify/HexxitGearR/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
 </p>
 
 <table align="center" style="border-collapse: collapse; margin: 20px auto; width: 80%;">

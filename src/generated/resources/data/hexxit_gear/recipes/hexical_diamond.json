@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "P": {
+      "item": "hexxit_gear:hexical_petal"
+    }
+  },
+  "pattern": [
+    " P ",
+    "P#P",
+    " P "
+  ],
+  "result": {
+    "item": "hexxit_gear:hexical_diamond"
+  },
+  "show_notification": true
+}

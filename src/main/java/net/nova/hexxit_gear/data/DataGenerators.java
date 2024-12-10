@@ -3,10 +3,10 @@ package net.nova.hexxit_gear.data;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.nova.hexxit_gear.HexxitGearR;
 import net.nova.hexxit_gear.data.loot.HGLootTableProvider;
 import net.nova.hexxit_gear.data.recipe.HGRecipeProvider;
@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -36,9 +36,9 @@ public class DataGenerators {
             generator.addProvider(true, modBlockTagsProvider);
             generator.addProvider(true, new HGItemTagsProvider(output, lookupProvider, modBlockTagsProvider, existingFileHelper));
 
-            generator.addProvider(true, new HGLootTableProvider(output, lookupProvider));
+            generator.addProvider(true, new HGLootTableProvider(output));
 
-            generator.addProvider(true, new HGRecipeProvider(output, lookupProvider));
+            generator.addProvider(true, new HGRecipeProvider(output));
 
             generator.addProvider(true, new DatapackProvider(output, lookupProvider));
 

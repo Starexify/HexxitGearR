@@ -9,7 +9,7 @@ import net.nova.hexxit_gear.HexxitGearR;
 
 public class ThiefHoodModel extends BaseHelmetModel {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("thief_hood"), "main");
-    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/models/armor/thief_hood.png");
+    public static final String TEXTURE = HexxitGearR.rl("textures/models/armor/thief_hood.png").toString();
 
     public ThiefHoodModel(ModelPart root) {
         super(root);

@@ -9,7 +9,7 @@ import net.nova.hexxit_gear.HexxitGearR;
 
 public class ScaleHelmetModel extends BaseHelmetModel {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("scale_helmet"), "main");
-    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/models/armor/scale_helmet.png");
+    public static final String TEXTURE = HexxitGearR.rl("textures/models/armor/scale_helmet.png").toString();
 
     public ScaleHelmetModel(ModelPart root) {
         super(root);

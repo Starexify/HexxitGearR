@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "minecraft:skeleton_skull"
+    }
+  },
+  "pattern": [
+    "BSB",
+    "B#B"
+  ],
+  "result": {
+    "item": "hexxit_gear:tribal_skull"
+  },
+  "show_notification": true
+}

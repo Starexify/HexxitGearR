@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "hexxit_gear:hexical_diamond"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "pattern": [
+    "R R",
+    "L#L",
+    " L "
+  ],
+  "result": {
+    "item": "hexxit_gear:thief_tunic"
+  },
+  "show_notification": true
+}
