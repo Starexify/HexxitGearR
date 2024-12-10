@@ -21,8 +21,8 @@ public class HexxitGearR {
     public static final String MODID = "hexxit_gear";
     public static final Logger logger = LoggerFactory.getLogger(HexxitGearR.class);
 
-    public HexxitGearR(FMLJavaModLoadingContext context) {
-        IEventBus bus = context.getModEventBus();
+    public HexxitGearR() {
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         CreativeTab.CREATIVE_TAB.register(bus);
         HGItems.ITEMS.register(bus);
