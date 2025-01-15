@@ -18,6 +18,7 @@ public class ClientEvents {
     @SubscribeEvent
     public static void addItemProperty(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(HGBlocks.HEXBISCUS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HGBlocks.POTTED_HEXBISCUS.get(), RenderType.cutout());
     }
 
     @SubscribeEvent

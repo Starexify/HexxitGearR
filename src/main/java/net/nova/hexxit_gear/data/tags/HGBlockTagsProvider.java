@@ -2,7 +2,9 @@ package net.nova.hexxit_gear.data.tags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.nova.hexxit_gear.init.HGBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -14,6 +16,8 @@ public class HGBlockTagsProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
+    protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.FLOWERS).add(HGBlocks.HEXBISCUS.get());
+        tag(BlockTags.FLOWER_POTS).add(HGBlocks.POTTED_HEXBISCUS.get());
     }
 }

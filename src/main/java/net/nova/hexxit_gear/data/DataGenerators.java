@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.nova.hexxit_gear.data.loot.HGLootTableProvider;
+import net.nova.hexxit_gear.data.models.HGEquipmentModelProvider;
 import net.nova.hexxit_gear.data.models.HGModelProvider;
 import net.nova.hexxit_gear.data.recipe.HGRecipeProvider;
 import net.nova.hexxit_gear.data.tags.HGBlockTagsProvider;
@@ -25,6 +26,7 @@ public class DataGenerators {
         event.addProvider(new LangProvider(output));
 
         event.addProvider(new HGModelProvider(output));
+        event.addProvider(new HGEquipmentModelProvider(output));
 
         HGBlockTagsProvider modBlockTagsProvider = new HGBlockTagsProvider(output, lookupProvider);
         event.addProvider(modBlockTagsProvider);

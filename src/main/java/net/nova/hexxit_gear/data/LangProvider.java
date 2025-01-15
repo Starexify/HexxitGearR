@@ -3,6 +3,7 @@ package net.nova.hexxit_gear.data;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.nova.hexxit_gear.init.CreativeTab;
+import net.nova.hexxit_gear.init.HGBlocks;
 import net.nova.hexxit_gear.init.HGItems;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
@@ -14,6 +15,8 @@ public class LangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        addBlock(HGBlocks.HEXBISCUS, "Hexbiscus");
+
         // Items
         addItem(HGItems.HEXICAL_PETAL, "Hexical Petal");
         addItem(HGItems.HEXICAL_ESSENCE, "Hexical Essence");
