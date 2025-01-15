@@ -9,7 +9,7 @@ import net.nova.hexxit_gear.HexxitGearR;
 
 public class SageHoodModel extends BaseHelmetModel {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("sage_hood"), "main");
-    public static final String TEXTURE = HexxitGearR.rl("textures/models/armor/sage_hood.png").toString();
+    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/models/armor/sage_hood.png");
 
     public SageHoodModel(ModelPart root) {
         super(root);

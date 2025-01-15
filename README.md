@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Starexify/HexxitGearR/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
-  <a href="https://github.com/Starexify/HexxitGearR/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
+  <a href="https://github.com/Starexify/HexxiGearR/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
+  <a href="https://github.com/Starexify/HexxiGearR/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
 </p>
 
 <table align="center" style="border-collapse: collapse; margin: 20px auto; width: 80%;">
