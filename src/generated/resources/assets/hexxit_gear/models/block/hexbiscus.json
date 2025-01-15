@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hexxit_gear:block/hexbiscus"
+  }
+}

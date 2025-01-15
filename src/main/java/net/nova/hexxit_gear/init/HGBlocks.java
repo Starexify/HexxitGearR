@@ -1,10 +1,7 @@
 package net.nova.hexxit_gear.init;
 
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -28,7 +25,7 @@ public class HGBlocks {
                     .pushReaction(PushReaction.DESTROY)
                     .lightLevel(light -> 4));
 
-    public static final DeferredBlock<Block> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", properties -> new FlowerPotBlock(null, HEXBISCUS, properties), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
+    public static final DeferredBlock<Block> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", properties -> new FlowerPotBlock(HEXBISCUS.get(), properties), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
 
     // Registers
     public static <T extends Block> DeferredBlock<T> registerBlockWithItem(String name, Function<BlockBehaviour.Properties, T> blockCreator, BlockBehaviour.Properties properties) {

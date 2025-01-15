@@ -1,15 +1,25 @@
 package net.nova.hexxit_gear.event;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.nova.hexxit_gear.init.HGBlocks;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEvents {
+
+    @SubscribeEvent
+    public static void addItemProperty(FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(HGBlocks.HEXBISCUS.get(), RenderType.cutout());
+    }
+
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
 /*        event.registerLayerDefinition(ScaleHelmetModel.LAYER_LOCATION, ScaleHelmetModel::createLayer);
