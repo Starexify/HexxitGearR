@@ -4,8 +4,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.nova.hexxit_gear.init.HGItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -13,8 +11,8 @@ import java.util.concurrent.CompletableFuture;
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class HGItemTagsProvider extends ItemTagsProvider {
-    public HGItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, HGBlockTagsProvider provider, ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, provider.contentsGetter(), MODID, existingFileHelper);
+    public HGItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, HGBlockTagsProvider provider) {
+        super(output, lookupProvider, provider.contentsGetter(), MODID);
     }
 
     @Override
