@@ -4,9 +4,7 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
 import net.nova.hexxit_gear.HexxitGearR;
 
 public class ScaleHelmetModel extends BaseHelmetModel {
