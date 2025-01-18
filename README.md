@@ -1,4 +1,4 @@
-![Hexxit Gear R Logo](https://github.com/Starexify/HexxiGearR/blob/main/src/main/resources/hexxit_gear_r_logo.png?raw=true)
+![Hexxit Gear R Logo](https://github.com/Starexify/HexxitGearR/blob/1.21.4-neo/src/main/resources/hexxit_gear_r_logo.png?raw=true)
 
 <p align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/hexxit-gear-r"><img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg"></a>
