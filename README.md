@@ -28,6 +28,11 @@
       </a>
     </td>
     <td align="center" style="border: none; padding: 10px;">
+      <a href="#-credits" style="text-decoration: none; color: #00CC44; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;"> 
+        🔑 Credits
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 10px;">
       <a href="#-license" style="text-decoration: none; color: #00CC44; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;">
         📜 License
       </a>
@@ -63,9 +68,22 @@ use them.
   </tbody>
 </table>
 
+## 🔑 Credits
+
+### Ported/Maintained by
+
+- **ImVeryBad** _(Me)_ - [1.14.4 - 1.21.4 versions]
+- **Shadows_of_Fire** - [[1.10.2 - 1.12.2 versions]](https://www.curseforge.com/minecraft/mc-mods/hexxit-gear)
+
+### Original by
+
+- Coding by **sct** - [Original Mod Repo](https://github.com/sct/HexxitGear)
+- Art by **Cheapshot**
+
 ## 📜 License
 
-This mod is licensed under the MIT License, allowing for free use, modification, and distribution, meaning you can use my mod in your modpacks. For more details, please see the full license included with the mod.
+This mod is licensed under the MIT License, allowing for free use, modification, and distribution, meaning you can use
+my mod in your modpacks. For more details, please see the full license included with the mod.
 
 
 <p align="center">
