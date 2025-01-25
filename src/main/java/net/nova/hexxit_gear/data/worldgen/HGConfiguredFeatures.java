@@ -19,11 +19,10 @@ public class HGConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEXBISCUS = registerKey("hexbiscus");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        FeatureUtils.register(
-                context, HEXBISCUS,
+        FeatureUtils.register(context, HEXBISCUS,
                 Feature.FLOWER,
-                new RandomPatchConfiguration(
-                        4, 2, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(HGBlocks.HEXBISCUS.get())))
+                new RandomPatchConfiguration(4, 2, 2,
+                        PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(HGBlocks.HEXBISCUS.get())))
                 ));
     }
 
