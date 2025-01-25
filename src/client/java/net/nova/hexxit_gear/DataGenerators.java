@@ -29,7 +29,7 @@ public class DataGenerators implements DataGeneratorEntrypoint {
 
         pack.addProvider(HGRecipeProvider::new);
 
-        pack.addProvider(HGConfiguredFeatures::new);
-        pack.addProvider(HGPlacedFeatures::new);
+        //pack.addProvider(HGConfiguredFeatures::new);
+        //pack.addProvider(HGPlacedFeatures::new);
     }
 }

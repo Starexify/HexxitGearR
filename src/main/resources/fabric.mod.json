@@ -5,7 +5,8 @@
   "name": "Hexxit Gear R",
   "description": "Big Swords R is trying to bring back the nostalgia of the Asgard Shield mod for modern Minecraft, adding BIG swords, scythes, glaives and shields to the game with special stuff.",
   "authors": [
-    "ImVeryBad", "Foxirion"
+    "ImVeryBad",
+    "Foxirion"
   ],
   "contact": {
     "homepage": "https://github.com/Starexify/BigSwordsR/wiki",
@@ -25,6 +26,12 @@
       "net.nova.hexxit_gear.DataGenerators"
     ]
   },
+  "mixins": [
+    {
+      "config": "hexxit_gear.client.mixins.json",
+      "environment": "client"
+    }
+  ],
   "depends": {
     "fabricloader": ">=0.16.9",
     "minecraft": "~1.21.4",
