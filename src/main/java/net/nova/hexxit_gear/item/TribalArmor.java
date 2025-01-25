@@ -17,13 +17,11 @@ public class TribalArmor extends ArmorItem {
 
     // Armor Effects
     @Override
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+        super.inventoryTick(stack, level, entity, slotId, isSelected);
 
-        if (pEntity instanceof LivingEntity livingEntity) {
+        if (entity instanceof LivingEntity livingEntity) {
             boolean isWearingFullSet = true;
-            int index = 0;
-
             for (ItemStack armorStack : livingEntity.getArmorSlots()) {
                 if (!(armorStack.getItem() instanceof TribalArmor)) {
                     isWearingFullSet = false;
