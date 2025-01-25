@@ -1,6 +1,6 @@
 package net.nova.hexxit_gear.init;
 
-import net.minecraft.tags.ItemTags;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.nova.hexxit_gear.HexxitGearR;
@@ -15,6 +15,6 @@ public class HGTags {
 
     // Registers
     public static TagKey<Item> itemTag(String name) {
-        return ItemTags.create(HexxitGearR.rl(name));
+        return TagKey.create(Registries.ITEM,HexxitGearR.rl(name));
     }
 }
