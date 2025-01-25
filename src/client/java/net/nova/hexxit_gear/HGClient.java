@@ -31,24 +31,11 @@ public class HGClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(SageHoodModel.LAYER_LOCATION, SageHoodModel::createLayer);
 
         // Custom Armor Renderer
-        registerAutomaticArmorRenderer(HGItems.SCALE_HELMET,
-                () -> new ScaleHelmetModel(Minecraft.getInstance().getEntityModels().bakeLayer(ScaleHelmetModel.LAYER_LOCATION)),
-                ScaleHelmetModel.TEXTURE
-        );
-        registerAutomaticArmorRenderer(HGItems.TRIBAL_SKULL,
-                () -> new TribalSkullModel(Minecraft.getInstance().getEntityModels().bakeLayer(TribalSkullModel.LAYER_LOCATION)),
-                TribalSkullModel.TEXTURE
-        );
-        registerAutomaticArmorRenderer(HGItems.THIEF_HOOD,
-                () -> new ThiefHoodModel(Minecraft.getInstance().getEntityModels().bakeLayer(ThiefHoodModel.LAYER_LOCATION)),
-                ThiefHoodModel.TEXTURE
-        );
-        registerAutomaticArmorRenderer(HGItems.SAGE_HOOD,
-                () -> new SageHoodModel(Minecraft.getInstance().getEntityModels().bakeLayer(SageHoodModel.LAYER_LOCATION)),
-                SageHoodModel.TEXTURE
-        );
+        registerAutomaticArmorRenderer(HGItems.SCALE_HELMET, () -> new ScaleHelmetModel(Minecraft.getInstance().getEntityModels().bakeLayer(ScaleHelmetModel.LAYER_LOCATION)), ScaleHelmetModel.TEXTURE);
+        registerAutomaticArmorRenderer(HGItems.TRIBAL_SKULL, () -> new TribalSkullModel(Minecraft.getInstance().getEntityModels().bakeLayer(TribalSkullModel.LAYER_LOCATION)), TribalSkullModel.TEXTURE);
+        registerAutomaticArmorRenderer(HGItems.THIEF_HOOD, () -> new ThiefHoodModel(Minecraft.getInstance().getEntityModels().bakeLayer(ThiefHoodModel.LAYER_LOCATION)), ThiefHoodModel.TEXTURE);
+        registerAutomaticArmorRenderer(HGItems.SAGE_HOOD, () -> new SageHoodModel(Minecraft.getInstance().getEntityModels().bakeLayer(SageHoodModel.LAYER_LOCATION)), SageHoodModel.TEXTURE);
     }
-
 
     public static <T extends Model> void registerAutomaticArmorRenderer(Item item, Supplier<T> modelSupplier, ResourceLocation texture) {
         AtomicReference<T> cachedModel = new AtomicReference<>();
