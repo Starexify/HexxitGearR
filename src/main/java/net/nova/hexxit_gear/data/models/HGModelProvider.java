@@ -18,7 +18,7 @@ public class HGModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         // Block Models
-        blockModels.createPlantWithDefaultItem(HGBlocks.HEXBISCUS.get(), HGBlocks.POTTED_HEXBISCUS.get(), BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModels.createPlantWithDefaultItem(HGBlocks.HEXBISCUS.get(), HGBlocks.POTTED_HEXBISCUS.get(), BlockModelGenerators.PlantType.EMISSIVE_NOT_TINTED);
 
         // Item Models
         itemModels.generateFlatItem(HGItems.HEXICAL_PETAL.get(), ModelTemplates.FLAT_ITEM);
