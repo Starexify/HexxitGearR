@@ -23,7 +23,7 @@ public class HGPlacedFeatures {
         Holder<ConfiguredFeature<?, ?>> holder = holdergetter.getOrThrow(HGConfiguredFeatures.HEXBISCUS);
 
         bootstrapContext.register(HEXBISCUS_PLACED, new PlacedFeature(holder,
-                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+                List.of(RarityFilter.onAverageOnceEvery(124), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

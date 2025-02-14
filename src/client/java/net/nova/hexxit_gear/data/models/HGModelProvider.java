@@ -16,7 +16,7 @@ public class HGModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         // Block Models
-        blockModelGenerators.createPlantWithDefaultItem(HGBlocks.HEXBISCUS, HGBlocks.POTTED_HEXBISCUS, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(HGBlocks.HEXBISCUS, HGBlocks.POTTED_HEXBISCUS, BlockModelGenerators.PlantType.EMISSIVE_NOT_TINTED);
     }
 
     @Override
