@@ -15,7 +15,7 @@ import static net.nova.hexxit_gear.HexxitGearR.MODID;
 public class HGBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
-    public static final DeferredBlock<FlowerBlock> HEXBISCUS = registerBlockWithItem("hexbiscus", properties -> new FlowerBlock(MobEffects.DAMAGE_RESISTANCE, 5.0F, properties),
+    public static final DeferredBlock<FlowerBlock> HEXBISCUS = registerBlockWithItem("hexbiscus", properties -> new FlowerBlock(MobEffects.RESISTANCE, 5.0F, properties),
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.PLANT)
                     .noCollission()
