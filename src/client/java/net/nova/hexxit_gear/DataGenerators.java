@@ -21,17 +21,12 @@ public class DataGenerators implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(LangProvider::new);
-
         pack.addProvider(HGModelProvider::new);
         pack.addProvider(HGEquipmentModelProvider::new);
-
         pack.addProvider(HGBlockTagsProvider::new);
         pack.addProvider(HGItemTagsProvider::new);
-
         pack.addProvider(BlockLootTables::new);
-
         pack.addProvider(HGRecipeProvider::new);
-
         pack.addProvider(HGWorldgenGenerator::new);
     }
 

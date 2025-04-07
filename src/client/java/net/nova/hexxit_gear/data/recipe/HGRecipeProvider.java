@@ -15,7 +15,6 @@ public class HGRecipeProvider extends FabricRecipeProvider {
 
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
-
         return new HGRecipes(provider, recipeOutput);
     }
 

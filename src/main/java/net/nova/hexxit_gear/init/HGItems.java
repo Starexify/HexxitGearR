@@ -21,28 +21,29 @@ public class HGItems {
     public static Item HEXICAL_DIAMOND = registerSimpleItem("hexical_diamond");
 
     // Scale
-    public static Item SCALE_HELMET = registerItem("scale_helmet", properties -> new ScaleArmor(HGArmorMaterial.SCALE, ArmorType.HELMET, properties.fireResistant()));
-    public static Item SCALE_CHESTGUARD = registerItem("scale_chestguard", properties -> new ScaleArmor(HGArmorMaterial.SCALE, ArmorType.CHESTPLATE, properties.fireResistant()));
-    public static Item SCALE_LEGGINGS = registerItem("scale_leggings", properties -> new ScaleArmor(HGArmorMaterial.SCALE, ArmorType.LEGGINGS, properties.fireResistant()));
-    public static Item SCALE_BOOTS = registerItem("scale_boots", properties -> new ScaleArmor(HGArmorMaterial.SCALE, ArmorType.BOOTS, properties.fireResistant()));
+    // Scale
+    public static Item SCALE_HELMET = registerItem("scale_helmet", properties -> new ScaleArmor(properties.humanoidArmor(HGArmorMaterial.SCALE, ArmorType.HELMET).fireResistant()));
+    public static Item SCALE_CHESTGUARD = registerItem("scale_chestguard", properties -> new ScaleArmor(properties.humanoidArmor(HGArmorMaterial.SCALE, ArmorType.CHESTPLATE).fireResistant()));
+    public static Item SCALE_LEGGINGS = registerItem("scale_leggings", properties -> new ScaleArmor(properties.humanoidArmor(HGArmorMaterial.SCALE, ArmorType.LEGGINGS).fireResistant()));
+    public static Item SCALE_BOOTS = registerItem("scale_boots", properties -> new ScaleArmor(properties.humanoidArmor(HGArmorMaterial.SCALE, ArmorType.BOOTS).fireResistant()));
 
     // Tribal
-    public static Item TRIBAL_SKULL = registerItem("tribal_skull", properties -> new TribalArmor(HGArmorMaterial.TRIBAL, ArmorType.HELMET, properties.fireResistant()));
-    public static Item TRIBAL_TUNIC = registerItem("tribal_tunic", properties -> new TribalArmor(HGArmorMaterial.TRIBAL, ArmorType.CHESTPLATE, properties.fireResistant()));
-    public static Item TRIBAL_LEGGINGS = registerItem("tribal_leggings", properties -> new TribalArmor(HGArmorMaterial.TRIBAL, ArmorType.LEGGINGS, properties.fireResistant()));
-    public static Item TRIBAL_WARBOOTS = registerItem("tribal_warboots", properties -> new TribalArmor(HGArmorMaterial.TRIBAL, ArmorType.BOOTS, properties.fireResistant()));
+    public static Item TRIBAL_SKULL = registerItem("tribal_skull", properties -> new TribalArmor(properties.humanoidArmor(HGArmorMaterial.TRIBAL, ArmorType.HELMET).fireResistant()));
+    public static Item TRIBAL_TUNIC = registerItem("tribal_tunic", properties -> new TribalArmor(properties.humanoidArmor(HGArmorMaterial.TRIBAL, ArmorType.CHESTPLATE).fireResistant()));
+    public static Item TRIBAL_LEGGINGS = registerItem("tribal_leggings", properties -> new TribalArmor(properties.humanoidArmor(HGArmorMaterial.TRIBAL, ArmorType.LEGGINGS).fireResistant()));
+    public static Item TRIBAL_WARBOOTS = registerItem("tribal_warboots", properties -> new TribalArmor(properties.humanoidArmor(HGArmorMaterial.TRIBAL, ArmorType.BOOTS).fireResistant()));
 
     // Thief
-    public static Item THIEF_HOOD = registerItem("thief_hood", properties -> new ThiefArmor(HGArmorMaterial.THIEF, ArmorType.HELMET, properties.fireResistant()));
-    public static Item THIEF_TUNIC = registerItem("thief_tunic", properties -> new ThiefArmor(HGArmorMaterial.THIEF, ArmorType.CHESTPLATE, properties.fireResistant()));
-    public static Item THIEF_TROUSERS = registerItem("thief_trousers", properties -> new ThiefArmor(HGArmorMaterial.THIEF, ArmorType.LEGGINGS, properties.fireResistant()));
-    public static Item THIEF_TURNSHOES = registerItem("thief_turnshoes", properties -> new ThiefArmor(HGArmorMaterial.THIEF, ArmorType.BOOTS, properties.fireResistant()));
+    public static Item THIEF_HOOD = registerItem("thief_hood", properties -> new ThiefArmor(properties.humanoidArmor(HGArmorMaterial.THIEF, ArmorType.HELMET).fireResistant()));
+    public static Item THIEF_TUNIC = registerItem("thief_tunic", properties -> new ThiefArmor(properties.humanoidArmor(HGArmorMaterial.THIEF, ArmorType.CHESTPLATE).fireResistant()));
+    public static Item THIEF_TROUSERS = registerItem("thief_trousers", properties -> new ThiefArmor(properties.humanoidArmor(HGArmorMaterial.THIEF, ArmorType.LEGGINGS).fireResistant()));
+    public static Item THIEF_TURNSHOES = registerItem("thief_turnshoes", properties -> new ThiefArmor(properties.humanoidArmor(HGArmorMaterial.THIEF, ArmorType.BOOTS).fireResistant()));
 
     // Sage
-    public static Item SAGE_HOOD = registerItem("sage_hood", properties -> new SageArmor(HGArmorMaterial.SAGE, ArmorType.HELMET, properties.fireResistant()));
-    public static Item SAGE_ROBE = registerItem("sage_robe", properties -> new SageArmor(HGArmorMaterial.SAGE, ArmorType.CHESTPLATE, properties.fireResistant()));
-    public static Item SAGE_PANTS = registerItem("sage_pants", properties -> new SageArmor(HGArmorMaterial.SAGE, ArmorType.LEGGINGS, properties.fireResistant()));
-    public static Item SAGE_WALKERS = registerItem("sage_walkers", properties -> new SageArmor(HGArmorMaterial.SAGE, ArmorType.BOOTS, properties.fireResistant()));
+    public static Item SAGE_HOOD = registerItem("sage_hood", properties -> new SageArmor(properties.humanoidArmor(HGArmorMaterial.SAGE, ArmorType.HELMET).fireResistant()));
+    public static Item SAGE_ROBE = registerItem("sage_robe", properties -> new SageArmor(properties.humanoidArmor(HGArmorMaterial.SAGE, ArmorType.CHESTPLATE).fireResistant()));
+    public static Item SAGE_PANTS = registerItem("sage_pants", properties -> new SageArmor(properties.humanoidArmor(HGArmorMaterial.SAGE, ArmorType.LEGGINGS).fireResistant()));
+    public static Item SAGE_WALKERS = registerItem("sage_walkers", properties -> new SageArmor(properties.humanoidArmor(HGArmorMaterial.SAGE, ArmorType.BOOTS).fireResistant()));
 
     public static Item registerItem(String name, Function<Item.Properties, Item> factory) {
         return register(name, factory, new Item.Properties());
