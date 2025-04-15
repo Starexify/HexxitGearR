@@ -1,14 +1,20 @@
 package net.nova.hexxit_gear;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.nova.hexxit_gear.init.HGBlocks;
 import net.nova.hexxit_gear.init.HGItems;
 import net.nova.hexxit_gear.model.*;
@@ -38,13 +44,24 @@ public class HGClient implements ClientModInitializer {
     }
 
     public static <T extends Model> void registerAutomaticArmorRenderer(Item item, Supplier<T> modelSupplier, ResourceLocation texture) {
-        AtomicReference<T> cachedModel = new AtomicReference<>();
-        ArmorRenderer.register((matrices, vertexConsumers, stack, renderState, slot, light, humanoidModel) -> {
-            T armorModel = cachedModel.updateAndGet(existing -> existing != null ? existing : modelSupplier.get());
-            if (armorModel instanceof BaseHelmetModel helmetModel) {
-                helmetModel.helmet.copyFrom(humanoidModel.head);
-            }
-            ArmorRenderer.renderPart(matrices, vertexConsumers, light, stack, armorModel, texture);
-        }, item);
+        ArmorRenderer.register(new CachedModelArmorRenderer<>(modelSupplier, texture), item);
+    }
+
+    public static class CachedModelArmorRenderer<T extends Model> implements ArmorRenderer {
+        public final Supplier<T> modelSupplier;
+        public final ResourceLocation texture;
+        public T cachedModel;
+
+        public CachedModelArmorRenderer(Supplier<T> modelSupplier, ResourceLocation texture) {
+            this.modelSupplier = modelSupplier;
+            this.texture = texture;
+        }
+
+        @Override
+        public void render(PoseStack poseStack, MultiBufferSource multiBufferSource, ItemStack itemStack, HumanoidRenderState humanoidRenderState, EquipmentSlot equipmentSlot, int i, HumanoidModel<HumanoidRenderState> humanoidModel) {
+            if (cachedModel == null) cachedModel = modelSupplier.get();
+            if (cachedModel instanceof BaseHelmetModel helmetModel) helmetModel.helmet.copyFrom(humanoidModel.head);
+            ArmorRenderer.renderPart(poseStack, multiBufferSource, i, itemStack, cachedModel, texture);
+        }
     }
 }
