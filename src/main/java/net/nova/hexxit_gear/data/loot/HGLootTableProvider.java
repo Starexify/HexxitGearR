@@ -32,7 +32,7 @@ public class HGLootTableProvider extends LootTableProvider {
                 .filter(id -> id.registry().getNamespace().equals(MODID))
                 .collect(Collectors.toSet());
         for (var id : Sets.difference(modLootTablesId, writableregistry.keySet())) {
-            validationcontext.reportProblem("Missing build-in table:" + id);
+            validationcontext.reportProblem(problemreporter$collector.forChild(id));
         }
 
         writableregistry.forEach(lootTable -> lootTable.validate(validationcontext));

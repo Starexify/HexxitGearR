@@ -2,9 +2,11 @@ package net.nova.hexxit_gear.data.tags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.BlockTagCopyingItemTagProvider;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.nova.hexxit_gear.init.HGItems;
 import net.nova.hexxit_gear.init.HGTags;
 
@@ -12,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
-public class HGItemTagsProvider extends ItemTagsProvider {
+public class HGItemTagsProvider extends BlockTagCopyingItemTagProvider {
     public HGItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags) {
         super(output, lookupProvider, blockTags, MODID);
     }

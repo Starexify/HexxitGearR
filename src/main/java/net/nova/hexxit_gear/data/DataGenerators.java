@@ -20,7 +20,7 @@ import java.util.Set;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = MODID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event) {

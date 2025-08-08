@@ -6,7 +6,7 @@ import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -23,13 +23,13 @@ import net.nova.hexxit_gear.init.HGItems;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = MODID)
 public class ClientEvents {
 
     @SubscribeEvent
     public static void addItemProperty(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(HGBlocks.HEXBISCUS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HGBlocks.POTTED_HEXBISCUS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HGBlocks.HEXBISCUS.get(), ChunkSectionLayer.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(HGBlocks.POTTED_HEXBISCUS.get(), ChunkSectionLayer.CUTOUT);
     }
 
     @SubscribeEvent
