@@ -20,9 +20,7 @@ public class HGPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         Holder<ConfiguredFeature<?, ?>> holder = holdergetter.getOrThrow(HGConfiguredFeatures.HEXBISCUS);
 
-        PlacementUtils.register(
-                context, HEXBISCUS_PLACED, holder, RarityFilter.onAverageOnceEvery(124), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()
-        );
+        PlacementUtils.register(context, HEXBISCUS_PLACED, holder, RarityFilter.onAverageOnceEvery(124), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

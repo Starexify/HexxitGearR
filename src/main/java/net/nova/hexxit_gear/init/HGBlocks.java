@@ -25,7 +25,7 @@ public class HGBlocks {
                     .pushReaction(PushReaction.DESTROY)
                     .lightLevel(light -> 4));
 
-    public static final DeferredBlock<Block> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", properties -> new FlowerPotBlock(HEXBISCUS.get(), properties), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
+    public static final DeferredBlock<Block> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HEXBISCUS, properties), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
 
     // Registers
     public static <T extends Block> DeferredBlock<T> registerBlockWithItem(String name, Function<BlockBehaviour.Properties, T> blockCreator, BlockBehaviour.Properties properties) {

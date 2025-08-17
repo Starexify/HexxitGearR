@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class BlockLootTables extends BlockLootSubProvider {
-    protected BlockLootTables(HolderLookup.Provider pProvider) {
+    public BlockLootTables(HolderLookup.Provider pProvider) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pProvider);
     }
 

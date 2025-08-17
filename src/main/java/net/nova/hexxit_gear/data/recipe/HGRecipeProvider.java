@@ -11,6 +11,8 @@ import net.nova.hexxit_gear.init.HGItems;
 
 import java.util.concurrent.CompletableFuture;
 
+import static net.nova.hexxit_gear.HexxitGearR.MODID;
+
 public class HGRecipeProvider extends RecipeProvider {
     protected HGRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         super(registries, output);
@@ -19,7 +21,12 @@ public class HGRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         // Hexical
-        oneToOneConversionRecipe(HGItems.HEXICAL_PETAL, HGBlocks.HEXBISCUS, "hexical_petal");
+        shapeless(RecipeCategory.MISC, HGItems.HEXICAL_PETAL, 1)
+                .requires(HGBlocks.HEXBISCUS)
+                .group("hexical_petal")
+                .unlockedBy(getHasName(HGBlocks.HEXBISCUS), has(HGBlocks.HEXBISCUS))
+                .save(output, MODID + ":" + getConversionRecipeName(HGItems.HEXICAL_PETAL, HGBlocks.HEXBISCUS));
+
         shaped(RecipeCategory.MISC, HGItems.HEXICAL_DIAMOND)
                 .define('#', Items.DIAMOND).define('P', HGItems.HEXICAL_PETAL)
                 .pattern(" P ")
