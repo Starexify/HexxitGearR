@@ -17,7 +17,7 @@ public class HGConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEXBISCUS = registerKey("hexbiscus");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        FeatureUtils.register(context, HEXBISCUS, Feature.FLOWER, new RandomPatchConfiguration(1, 1, 1,
+        FeatureUtils.register(context, HEXBISCUS, Feature.NO_BONEMEAL_FLOWER, new RandomPatchConfiguration(1, 1, 1,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(HGBlocks.HEXBISCUS.get())))
         ));
     }
