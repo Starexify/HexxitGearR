@@ -2,14 +2,14 @@ package net.nova.hexxit_gear;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -19,7 +19,6 @@ import net.nova.hexxit_gear.init.HGBlocks;
 import net.nova.hexxit_gear.init.HGItems;
 import net.nova.hexxit_gear.model.*;
 
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 
 public class HGClient implements ClientModInitializer {
@@ -27,8 +26,8 @@ public class HGClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         // RenderLayers
-        BlockRenderLayerMap.INSTANCE.putBlock(HGBlocks.HEXBISCUS, RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(HGBlocks.POTTED_HEXBISCUS, RenderType.cutout());
+        BlockRenderLayerMap.putBlock(HGBlocks.HEXBISCUS, ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(HGBlocks.POTTED_HEXBISCUS, ChunkSectionLayer.CUTOUT);
 
         // Layer Definitions
         EntityModelLayerRegistry.registerModelLayer(ScaleHelmetModel.LAYER_LOCATION, ScaleHelmetModel::createLayer);

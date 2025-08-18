@@ -16,13 +16,13 @@ public class HGItemTagsProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR).add(HGItems.SCALE_HELMET, HGItems.TRIBAL_SKULL, HGItems.THIEF_HOOD, HGItems.SAGE_HOOD);
-        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(HGItems.SCALE_CHESTGUARD, HGItems.TRIBAL_TUNIC, HGItems.THIEF_TUNIC, HGItems.SAGE_ROBE);
-        getOrCreateTagBuilder(ItemTags.LEG_ARMOR).add(HGItems.SCALE_LEGGINGS, HGItems.TRIBAL_LEGGINGS, HGItems.THIEF_TROUSERS, HGItems.SAGE_PANTS);
-        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR).add(HGItems.SCALE_BOOTS, HGItems.TRIBAL_WARBOOTS, HGItems.THIEF_TURNSHOES, HGItems.SAGE_WALKERS);
-        getOrCreateTagBuilder(HGTags.ItemTag.REPAIRS_SAGE_ARMOR).add(HGItems.HEXICAL_DIAMOND);
-        getOrCreateTagBuilder(HGTags.ItemTag.REPAIRS_TRIBAL_ARMOR).add(HGItems.HEXICAL_DIAMOND);
-        getOrCreateTagBuilder(HGTags.ItemTag.REPAIRS_THIEF_ARMOR).add(HGItems.HEXICAL_DIAMOND);
-        getOrCreateTagBuilder(HGTags.ItemTag.REPAIRS_SAGE_ARMOR).add(HGItems.HEXICAL_DIAMOND);
+        valueLookupBuilder(ItemTags.HEAD_ARMOR).add(HGItems.SCALE_HELMET, HGItems.TRIBAL_SKULL, HGItems.THIEF_HOOD, HGItems.SAGE_HOOD);
+        valueLookupBuilder(ItemTags.CHEST_ARMOR).add(HGItems.SCALE_CHESTGUARD, HGItems.TRIBAL_TUNIC, HGItems.THIEF_TUNIC, HGItems.SAGE_ROBE);
+        valueLookupBuilder(ItemTags.LEG_ARMOR).add(HGItems.SCALE_LEGGINGS, HGItems.TRIBAL_LEGGINGS, HGItems.THIEF_TROUSERS, HGItems.SAGE_PANTS);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR).add(HGItems.SCALE_BOOTS, HGItems.TRIBAL_WARBOOTS, HGItems.THIEF_TURNSHOES, HGItems.SAGE_WALKERS);
+        valueLookupBuilder(HGTags.ItemTag.REPAIRS_SAGE_ARMOR).add(HGItems.HEXICAL_DIAMOND);
+        valueLookupBuilder(HGTags.ItemTag.REPAIRS_TRIBAL_ARMOR).add(HGItems.HEXICAL_DIAMOND);
+        valueLookupBuilder(HGTags.ItemTag.REPAIRS_THIEF_ARMOR).add(HGItems.HEXICAL_DIAMOND);
+        valueLookupBuilder(HGTags.ItemTag.REPAIRS_SAGE_ARMOR).add(HGItems.HEXICAL_DIAMOND);
     }
 }

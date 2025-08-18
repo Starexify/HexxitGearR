@@ -15,7 +15,7 @@ public class HGBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        getOrCreateTagBuilder(BlockTags.FLOWERS).add(HGBlocks.HEXBISCUS);
-        getOrCreateTagBuilder(BlockTags.FLOWER_POTS).add(HGBlocks.POTTED_HEXBISCUS);
+        valueLookupBuilder(BlockTags.FLOWERS).add(HGBlocks.HEXBISCUS);
+        valueLookupBuilder(BlockTags.FLOWER_POTS).add(HGBlocks.POTTED_HEXBISCUS);
     }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:hexical_petal_from_hexbiscus"
+        "recipe": "hexxit_gear:hexical_petal_from_hexbiscus"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:hexical_petal_from_hexbiscus"
+      "hexxit_gear:hexical_petal_from_hexbiscus"
     ]
   }
 }
