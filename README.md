@@ -15,31 +15,6 @@
   <a href="https://github.com/Starexify/HexxiGearR/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Starexify/HexxiGearR?style=for-the-badge&color=2C0AC8"></a>
 </p>
 
-<table align="center" style="border-collapse: collapse; margin: 20px auto; width: 80%;">
-  <tr>
-    <td align="center" style="border: none; padding: 10px;">
-      <a href="#%E2%84%B9%EF%B8%8F-about" style="text-decoration: none; color: #00A7E1; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;">
-        ℹ️ About 
-      </a>
-    </td>
-    <td align="center" style="border: none; padding: 10px;">
-      <a href="#-features" style="text-decoration: none; color: #FF4F58; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;">
-        ✨ Features
-      </a>
-    </td>
-    <td align="center" style="border: none; padding: 10px;">
-      <a href="#-credits" style="text-decoration: none; color: #00CC44; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;"> 
-        🔑 Credits
-      </a>
-    </td>
-    <td align="center" style="border: none; padding: 10px;">
-      <a href="#-license" style="text-decoration: none; color: #00CC44; font-size: 1.2em; font-weight: bold; transition: color 0.3s ease;">
-        📜 License
-      </a>
-    </td>
-  </tr>
-</table>
-
 <p align="center">
     <strong>
         This mod is inspired by the old Hexxit Gear mod, and this is just a hobby project, therefore content may be different from originals.
