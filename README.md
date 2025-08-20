@@ -47,7 +47,7 @@ use them.
 
 ### Ported/Maintained by
 
-- **ImVeryBad** _(Me)_ - [1.14.4 - 1.21.4 versions]
+- **ImVeryBad** _(Me)_ - [1.14.4 - 1.21.8 versions]
 - **Shadows_of_Fire** - [[1.10.2 - 1.12.2 versions]](https://www.curseforge.com/minecraft/mc-mods/hexxit-gear)
 
 ### Original by
