@@ -3,7 +3,9 @@ package net.nova.hexxit_gear.init;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.nova.hexxit_gear.HexxitGearR;
@@ -12,8 +14,9 @@ import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class CreativeTab {
     public static String HEXXIT_GEAR_TAB_TITLE = MODID + ".creativetab";
+    public static ResourceKey<CreativeModeTab> HEXXIT_GEAR_TAB_KEY =  ResourceKey.create(Registries.CREATIVE_MODE_TAB, HexxitGearR.rl("hexxit_gear_tab"));
 
-    public static final CreativeModeTab HEXXIT_GEAR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, HexxitGearR.rl("hexxit_gear_tab"),
+    public static final CreativeModeTab HEXXIT_GEAR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, HEXXIT_GEAR_TAB_KEY,
             FabricItemGroup.builder()
                     .icon(() -> new ItemStack(HGItems.HEXICAL_DIAMOND))
                     .title(Component.translatable(HEXXIT_GEAR_TAB_TITLE))

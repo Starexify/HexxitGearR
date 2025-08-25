@@ -16,6 +16,10 @@
 </p>
 
 <p align="center">
+    <a href="https://starexify.github.io/FnB-Projects/src/"><img alt="F&B Projects Hub" height="56" src="https://raw.githubusercontent.com/Starexify/Starexify/b79e6e8e9e0772de98a4584e41476894a655ac0c/resources/Minecraft/Desc/site/cozy_vector.svg"></a>
+</p>
+
+<p align="center">
     <strong>
         This mod is inspired by the old Hexxit Gear mod, and this is just a hobby project, therefore content may be different from originals.
     </strong>
@@ -47,7 +51,7 @@ use them.
 
 ### Ported/Maintained by
 
-- **ImVeryBad** _(Me)_ - [1.14.4 - 1.21.4 versions]
+- **ImVeryBad** _(Me)_ - [1.14.4 - 1.21.8 versions]
 - **Shadows_of_Fire** - [[1.10.2 - 1.12.2 versions]](https://www.curseforge.com/minecraft/mc-mods/hexxit-gear)
 
 ### Original by
