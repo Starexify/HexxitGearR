@@ -26,19 +26,19 @@ import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 @EventBusSubscriber(modid = MODID)
 public class DataGenerators {
-    @SubscribeEvent
-    public static void gatherData(GatherDataEvent.Client event) {
-        event.createProvider(LangProvider::new);
-        event.createProvider(HGModelProvider::new);
-        event.createProvider(HGEquipmentModelProvider::new);
-        event.createBlockAndItemTags(HGBlockTagsProvider::new, HGItemTagsProvider::new);
-        event.createProvider((packOutput, lookupProvider) -> new LootTableProvider(packOutput, Collections.emptySet(),
-                        List.of(new LootTableProvider.SubProviderEntry(BlockLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
-        event.createProvider(HGRecipeProvider.Runner::new);
-        event.createDatapackRegistryObjects(new RegistrySetBuilder()
-                        .add(Registries.CONFIGURED_FEATURE, HGConfiguredFeatures::bootstrap)
-                        .add(Registries.PLACED_FEATURE, HGPlacedFeatures::bootstrap)
-                        .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, HGBiomeModifiers::bootstrap),
-                Set.of(MODID));
-    }
+  @SubscribeEvent
+  public static void gatherData(GatherDataEvent.Client event) {
+    event.createProvider(LangProvider::new);
+    event.createProvider(HGModelProvider::new);
+    event.createProvider(HGEquipmentModelProvider::new);
+    event.createBlockAndItemTags(HGBlockTagsProvider::new, HGItemTagsProvider::new);
+    event.createProvider((packOutput, lookupProvider) -> new LootTableProvider(packOutput, Collections.emptySet(),
+        List.of(new LootTableProvider.SubProviderEntry(BlockLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
+    event.createProvider(HGRecipeProvider.Runner::new);
+    event.createDatapackRegistryObjects(new RegistrySetBuilder()
+            .add(Registries.CONFIGURED_FEATURE, HGConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, HGPlacedFeatures::bootstrap)
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, HGBiomeModifiers::bootstrap),
+        Set.of(MODID));
+  }
 }

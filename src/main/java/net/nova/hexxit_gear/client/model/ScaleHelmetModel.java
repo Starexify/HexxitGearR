@@ -4,12 +4,12 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.nova.hexxit_gear.HexxitGearR;
 
 public class ScaleHelmetModel extends BaseHelmetModel {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("scale_helmet"), "main");
-    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/entity/equipment/helmet/scale.png");
+    public static final Identifier TEXTURE = HexxitGearR.rl("textures/entity/equipment/helmet/scale.png");
 
     public ScaleHelmetModel(ModelPart root) {
         super(root);

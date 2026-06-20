@@ -5,33 +5,23 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.nova.hexxit_gear.client.model.*;
-import net.nova.hexxit_gear.init.HGBlocks;
 import net.nova.hexxit_gear.init.HGItems;
+import org.jspecify.annotations.Nullable;
 
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 @EventBusSubscriber(modid = MODID)
 public class ClientEvents {
-
-    @SubscribeEvent
-    public static void addItemProperty(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(HGBlocks.HEXBISCUS.get(), ChunkSectionLayer.CUTOUT);
-        ItemBlockRenderTypes.setRenderLayer(HGBlocks.POTTED_HEXBISCUS.get(), ChunkSectionLayer.CUTOUT);
-    }
-
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ScaleHelmetModel.LAYER_LOCATION, ScaleHelmetModel::createLayer);
@@ -49,30 +39,32 @@ public class ClientEvents {
     }
 
     @FunctionalInterface
-    private interface ArmorModelSupplier<T extends Model> {
-        T create(ModelPart root);
+    public interface ArmorModelSupplier<T extends Model<HumanoidRenderState>> {
+        T create(
+            ModelPart root
+        );
     }
 
-    public static <T extends BaseHelmetModel> IClientItemExtensions createArmorExtensions(ArmorModelSupplier<T> modelSupplier, ResourceLocation texture, ModelLayerLocation layerLocation) {
+    public static <T extends BaseHelmetModel> IClientItemExtensions createArmorExtensions(ArmorModelSupplier<T> modelSupplier, Identifier texture, ModelLayerLocation layerLocation) {
         return new IClientItemExtensions() {
             private T armorModel;
 
             @Override
-            public Model getHumanoidArmorModel(ItemStack itemStack, EquipmentClientInfo.LayerType layerType, Model original) {
+            public Model<HumanoidRenderState> getHumanoidArmorModel(ItemStack itemStack, EquipmentClientInfo.LayerType layerType, Model original) {
                 if (original instanceof HumanoidModel<?> humanoidModel) {
                     if (armorModel == null) {
                         armorModel = modelSupplier.create(Minecraft.getInstance().getEntityModels().bakeLayer(layerLocation));
                         return armorModel;
                     }
-                    armorModel.helmet.copyFrom(humanoidModel.getHead());
+                    armorModel.helmet.loadPose(humanoidModel.getHead().storePose());
                 }
                 return armorModel;
             }
 
-            @Override
-            public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-                return texture;
-            }
+          @Override
+          public @Nullable Identifier getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, Identifier _default) {
+            return texture;
+          }
         };
     }
 }

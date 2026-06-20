@@ -18,15 +18,15 @@ links=["hexxit_gear.modrinth=modrinth.com/mod/hexxit-gear-r", "hexxit_gear.curse
 sources="https://github.com/Starexify/HexxiGearR"
 
 [[dependencies.${mod_id}]]
-    modId="neoforge"
-    type="required"
-    versionRange="[${neo_version},)"
-    ordering="NONE"
-    side="BOTH"
+  modId="neoforge"
+  type="required"
+  versionRange="[${neo_version},)"
+  ordering="NONE"
+  side="BOTH"
 
 [[dependencies.${mod_id}]]
-    modId="minecraft"
-    type="required"
-    versionRange="${minecraft_version_range}"
-    ordering="NONE"
-    side="BOTH"
+  modId="minecraft"
+  type="required"
+  versionRange="${minecraft_version_range}"
+  ordering="NONE"
+  side="BOTH"

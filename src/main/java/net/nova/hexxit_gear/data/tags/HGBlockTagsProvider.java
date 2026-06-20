@@ -11,13 +11,13 @@ import java.util.concurrent.CompletableFuture;
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class HGBlockTagsProvider extends BlockTagsProvider {
-    public HGBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-        super(output, lookupProvider, MODID);
-    }
+  public HGBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+    super(output, lookupProvider, MODID);
+  }
 
-    @Override
-    protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.FLOWERS).add(HGBlocks.HEXBISCUS.get());
-        tag(BlockTags.FLOWER_POTS).add(HGBlocks.POTTED_HEXBISCUS.get());
-    }
+  @Override
+  protected void addTags(HolderLookup.Provider provider) {
+    tag(BlockTags.FLOWERS).add(HGBlocks.HEXBISCUS.getKey());
+    tag(BlockTags.FLOWER_POTS).add(HGBlocks.POTTED_HEXBISCUS.getKey());
+  }
 }
