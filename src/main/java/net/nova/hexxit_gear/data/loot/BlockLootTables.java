@@ -1,7 +1,7 @@
 package net.nova.hexxit_gear.data.loot;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
@@ -10,11 +10,7 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.nova.hexxit_gear.init.HGBlocks;
 import net.nova.hexxit_gear.init.HGItems;
 
-import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
-
-import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class BlockLootTables extends BlockLootSubProvider {
   public BlockLootTables(HolderLookup.Provider pProvider) {
@@ -29,10 +25,6 @@ public class BlockLootTables extends BlockLootSubProvider {
 
   @Override
   protected Iterable<Block> getKnownBlocks() {
-    return BuiltInRegistries.BLOCK.stream()
-        .filter(block -> Optional.of(BuiltInRegistries.BLOCK.getKey(block))
-            .filter(key -> key.getNamespace().equals(MODID))
-            .isPresent())
-        .collect(Collectors.toSet());
+    return HGBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
   }
 }

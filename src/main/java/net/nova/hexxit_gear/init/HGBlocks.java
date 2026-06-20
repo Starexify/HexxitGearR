@@ -15,7 +15,7 @@ import static net.nova.hexxit_gear.HexxitGearR.MODID;
 public class HGBlocks {
   public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
-  public static final DeferredBlock<FlowerBlock> HEXBISCUS = registerBlockWithItem("hexbiscus", properties -> new FlowerBlock(MobEffects.RESISTANCE, 5.0F, properties),
+  public static final DeferredBlock<FlowerBlock> HEXBISCUS = registerBlockWithItem("hexbiscus", p -> new FlowerBlock(MobEffects.RESISTANCE, 5.0F, p),
       BlockBehaviour.Properties.of()
           .mapColor(MapColor.PLANT)
           .noCollision()
@@ -23,9 +23,14 @@ public class HGBlocks {
           .sound(SoundType.GRASS)
           .offsetType(BlockBehaviour.OffsetType.XZ)
           .pushReaction(PushReaction.DESTROY)
-          .lightLevel(light -> 4));
+          .lightLevel(statex -> 4));
 
-  public static final DeferredBlock<Block> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HEXBISCUS, properties), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
+  public static final DeferredBlock<FlowerPotBlock> POTTED_HEXBISCUS = registerBlockWithItem("potted_hexbiscus", p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HEXBISCUS, p),
+      BlockBehaviour.Properties.of()
+          .instabreak()
+          .noOcclusion()
+          .pushReaction(PushReaction.DESTROY)
+  );
 
   // Registers
   public static <T extends Block> DeferredBlock<T> registerBlockWithItem(String name, Function<BlockBehaviour.Properties, T> blockCreator, BlockBehaviour.Properties properties) {
