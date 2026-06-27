@@ -16,23 +16,23 @@ import net.nova.hexxit_gear.worldgen.HGPlacedFeatures;
 import net.nova.hexxit_gear.data.worldgen.HGWorldgenGenerator;
 
 public class DataGenerators implements DataGeneratorEntrypoint {
-    @Override
-    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+  @Override
+  public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+    FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-        pack.addProvider(LangProvider::new);
-        pack.addProvider(HGModelProvider::new);
-        pack.addProvider(HGEquipmentModelProvider::new);
-        pack.addProvider(HGBlockTagsProvider::new);
-        pack.addProvider(HGItemTagsProvider::new);
-        pack.addProvider(BlockLootTables::new);
-        pack.addProvider(HGRecipeProvider::new);
-        pack.addProvider(HGWorldgenGenerator::new);
-    }
+    pack.addProvider(LangProvider::new);
+    pack.addProvider(HGModelProvider::new);
+    pack.addProvider(HGEquipmentModelProvider::new);
+    pack.addProvider(HGBlockTagsProvider::new);
+    pack.addProvider(HGItemTagsProvider::new);
+    pack.addProvider(BlockLootTables::new);
+    pack.addProvider(HGRecipeProvider::new);
+    pack.addProvider(HGWorldgenGenerator::new);
+  }
 
-    @Override
-    public void buildRegistry(RegistrySetBuilder registryBuilder) {
-        registryBuilder.add(Registries.CONFIGURED_FEATURE, HGConfiguredFeatures::bootstrap);
-        registryBuilder.add(Registries.PLACED_FEATURE, HGPlacedFeatures::bootstrap);
-    }
+  @Override
+  public void buildRegistry(RegistrySetBuilder registryBuilder) {
+    registryBuilder.add(Registries.CONFIGURED_FEATURE, HGConfiguredFeatures::bootstrap);
+    registryBuilder.add(Registries.PLACED_FEATURE, HGPlacedFeatures::bootstrap);
+  }
 }

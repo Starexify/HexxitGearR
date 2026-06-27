@@ -1,32 +1,44 @@
 package net.nova.hexxit_gear.worldgen;
 
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.nova.hexxit_gear.HexxitGearR;
 
 import java.util.List;
 
 public class HGPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> HEXBISCUS_PLACED = registerKey("hexbiscus_placed");
+  public static final ResourceKey<PlacedFeature> HEXBISCUS_PLACED = registerKey("hexbiscus_placed");
 
-    public static void bootstrap(BootstrapContext<PlacedFeature> bootstrapContext) {
-        HolderGetter<ConfiguredFeature<?, ?>> holdergetter = bootstrapContext.lookup(Registries.CONFIGURED_FEATURE);
-        Holder<ConfiguredFeature<?, ?>> holder = holdergetter.getOrThrow(HGConfiguredFeatures.HEXBISCUS);
+  public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+    HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
+    Holder<ConfiguredFeature<?, ?>> hexbiscusHolder = holdergetter.getOrThrow(HGConfiguredFeatures.HEXBISCUS);
 
-        bootstrapContext.register(HEXBISCUS_PLACED, new PlacedFeature(holder,
-                List.of(RarityFilter.onAverageOnceEvery(124), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-    }
+    PlacementUtils.register(context, HEXBISCUS_PLACED, hexbiscusHolder,
+        RarityFilter.onAverageOnceEvery(124),
+        InSquarePlacement.spread(),
+        PlacementUtils.HEIGHTMAP,
+        BiomeFilter.biome(),
+        CountPlacement.of(1),
+        RandomOffsetPlacement.ofTriangle(1, 1),
+        BlockPredicateFilter.forPredicate(
+            BlockPredicate.allOf(
+                BlockPredicate.ONLY_IN_AIR_PREDICATE,
+                BlockPredicate.matchesBlocks(Direction.DOWN.getUnitVec3i(), Blocks.GRASS_BLOCK)
+            )
+        )
+    );
+  }
 
-    public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, HexxitGearR.rl(name));
-    }
+  public static ResourceKey<PlacedFeature> registerKey(String name) {
+    return ResourceKey.create(Registries.PLACED_FEATURE, HexxitGearR.rl(name));
+  }
 }

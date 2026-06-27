@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "hexxit_gear:hexical_diamond",
-    "C": "minecraft:chain",
+    "C": "minecraft:iron_chain",
     "L": "minecraft:leather"
   },
   "pattern": [
@@ -11,7 +11,6 @@
     "L L"
   ],
   "result": {
-    "count": 1,
     "id": "hexxit_gear:tribal_warboots"
   }
 }

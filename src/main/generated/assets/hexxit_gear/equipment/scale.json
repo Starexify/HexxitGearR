@@ -5,6 +5,11 @@
         "texture": "hexxit_gear:scale"
       }
     ],
+    "humanoid_baby": [
+      {
+        "texture": "hexxit_gear:scale"
+      }
+    ],
     "humanoid_leggings": [
       {
         "texture": "hexxit_gear:scale"

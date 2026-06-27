@@ -1,6 +1,6 @@
 package net.nova.hexxit_gear.init;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,47 +13,47 @@ import net.nova.hexxit_gear.HexxitGearR;
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class CreativeTab {
-    public static String HEXXIT_GEAR_TAB_TITLE = MODID + ".creativetab";
-    public static ResourceKey<CreativeModeTab> HEXXIT_GEAR_TAB_KEY =  ResourceKey.create(Registries.CREATIVE_MODE_TAB, HexxitGearR.rl("hexxit_gear_tab"));
+  public static String HEXXIT_GEAR_TAB_TITLE = MODID + ".creativetab";
+  public static ResourceKey<CreativeModeTab> HEXXIT_GEAR_TAB_KEY = ResourceKey.create(Registries.CREATIVE_MODE_TAB, HexxitGearR.rl("hexxit_gear_tab"));
 
-    public static final CreativeModeTab HEXXIT_GEAR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, HEXXIT_GEAR_TAB_KEY,
-            FabricItemGroup.builder()
-                    .icon(() -> new ItemStack(HGItems.HEXICAL_DIAMOND))
-                    .title(Component.translatable(HEXXIT_GEAR_TAB_TITLE))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        // Hexical
-                        output.accept(HGBlocks.HEXBISCUS);
-                        output.accept(HGItems.HEXICAL_PETAL);
-                        output.accept(HGItems.HEXICAL_ESSENCE);
-                        output.accept(HGItems.HEXICAL_DIAMOND);
+  public static final CreativeModeTab HEXXIT_GEAR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, HEXXIT_GEAR_TAB_KEY,
+      FabricCreativeModeTab.builder()
+          .icon(() -> new ItemStack(HGItems.HEXICAL_DIAMOND.getFirst()))
+          .title(Component.translatable(HEXXIT_GEAR_TAB_TITLE))
+          .displayItems((itemDisplayParameters, output) -> {
+            // Hexical
+            output.accept(HGBlocks.HEXBISCUS.getFirst().value());
+            output.accept(HGItems.HEXICAL_PETAL.getFirst().value());
+            output.accept(HGItems.HEXICAL_ESSENCE.getFirst().value());
+            output.accept(HGItems.HEXICAL_DIAMOND.getFirst().value());
 
-                        // Scale
-                        output.accept(HGItems.SCALE_HELMET);
-                        output.accept(HGItems.SCALE_CHESTGUARD);
-                        output.accept(HGItems.SCALE_LEGGINGS);
-                        output.accept(HGItems.SCALE_BOOTS);
+            // Scale
+            output.accept(HGItems.SCALE_HELMET.getFirst().value());
+            output.accept(HGItems.SCALE_CHESTGUARD.getFirst().value());
+            output.accept(HGItems.SCALE_LEGGINGS.getFirst().value());
+            output.accept(HGItems.SCALE_BOOTS.getFirst().value());
 
-                        // Tribal
-                        output.accept(HGItems.TRIBAL_SKULL);
-                        output.accept(HGItems.TRIBAL_TUNIC);
-                        output.accept(HGItems.TRIBAL_LEGGINGS);
-                        output.accept(HGItems.TRIBAL_WARBOOTS);
+            // Tribal
+            output.accept(HGItems.TRIBAL_SKULL.getFirst().value());
+            output.accept(HGItems.TRIBAL_TUNIC.getFirst().value());
+            output.accept(HGItems.TRIBAL_LEGGINGS.getFirst().value());
+            output.accept(HGItems.TRIBAL_WARBOOTS.getFirst().value());
 
-                        // Thief
-                        output.accept(HGItems.THIEF_HOOD);
-                        output.accept(HGItems.THIEF_TUNIC);
-                        output.accept(HGItems.THIEF_TROUSERS);
-                        output.accept(HGItems.THIEF_TURNSHOES);
+            // Thief
+            output.accept(HGItems.THIEF_HOOD.getFirst().value());
+            output.accept(HGItems.THIEF_TUNIC.getFirst().value());
+            output.accept(HGItems.THIEF_TROUSERS.getFirst().value());
+            output.accept(HGItems.THIEF_TURNSHOES.getFirst().value());
 
-                        // Sage
-                        output.accept(HGItems.SAGE_HOOD);
-                        output.accept(HGItems.SAGE_ROBE);
-                        output.accept(HGItems.SAGE_PANTS);
-                        output.accept(HGItems.SAGE_WALKERS);
-                    }).build()
-    );
+            // Sage
+            output.accept(HGItems.SAGE_HOOD.getFirst().value());
+            output.accept(HGItems.SAGE_ROBE.getFirst().value());
+            output.accept(HGItems.SAGE_PANTS.getFirst().value());
+            output.accept(HGItems.SAGE_WALKERS.getFirst().value());
+          }).build()
+  );
 
-    public static void initialize() {
-        HexxitGearR.LOGGER.info("Registering Creative Tab");
-    }
+  public static void initialize() {
+    HexxitGearR.LOGGER.info("Registering Creative Tab");
+  }
 }

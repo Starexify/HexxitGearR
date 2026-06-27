@@ -1,6 +1,6 @@
 package net.nova.hexxit_gear.data.models;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
@@ -16,10 +16,10 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class HGEquipmentModelProvider implements DataProvider {
-    public final FabricDataOutput output;
+    public final FabricPackOutput output;
     public final PackOutput.PathProvider pathResolver;
 
-    public HGEquipmentModelProvider(FabricDataOutput output) {
+    public HGEquipmentModelProvider(FabricPackOutput output) {
         this.output = output;
         this.pathResolver = output.createPathProvider(PackOutput.Target.RESOURCE_PACK, "equipment");
     }

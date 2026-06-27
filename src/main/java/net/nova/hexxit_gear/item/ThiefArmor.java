@@ -1,7 +1,7 @@
 package net.nova.hexxit_gear.item;
 
 import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -19,8 +19,8 @@ import org.jetbrains.annotations.Nullable;
 import static net.nova.hexxit_gear.HexxitGearR.MODID;
 
 public class ThiefArmor extends Item {
-    public ResourceLocation SPEED_MODIFIER_ID = ResourceLocation.fromNamespaceAndPath(MODID, "thief_speed_modifier");
-    public ResourceLocation STEP_MODIFIER_ID = ResourceLocation.fromNamespaceAndPath(MODID, "thief_step_modifier");
+    public Identifier SPEED_MODIFIER_ID = Identifier.fromNamespaceAndPath(MODID, "thief_speed_modifier");
+    public Identifier STEP_MODIFIER_ID = Identifier.fromNamespaceAndPath(MODID, "thief_step_modifier");
 
     public ThiefArmor(Properties properties) {
         super(properties);
@@ -47,7 +47,7 @@ public class ThiefArmor extends Item {
         HexxitGearR.addEffect(livingEntity, MobEffects.STRENGTH, 1, 0);
     }
 
-    public void applyOrRemoveModifier(LivingEntity entity, Holder<Attribute> attribute, ResourceLocation modifierId, float value, boolean shouldApply) {
+    public void applyOrRemoveModifier(LivingEntity entity, Holder<Attribute> attribute, Identifier modifierId, float value, boolean shouldApply) {
         AttributeInstance attributeInstance = entity.getAttributes().getInstance(attribute);
         if (attributeInstance == null) return;
 

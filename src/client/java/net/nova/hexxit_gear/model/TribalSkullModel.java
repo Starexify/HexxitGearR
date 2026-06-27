@@ -4,26 +4,26 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.nova.hexxit_gear.HexxitGearR;
 
 public class TribalSkullModel extends BaseHelmetModel {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("tribal_skull"), "main");
-    public static final ResourceLocation TEXTURE = HexxitGearR.rl("textures/entity/equipment/helmet/tribal.png");
+  public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(HexxitGearR.rl("tribal_skull"), "main");
+  public static final Identifier TEXTURE = HexxitGearR.rl("textures/entity/equipment/helmet/tribal.png");
 
-    public TribalSkullModel(ModelPart root) {
-        super(root);
-    }
+  public TribalSkullModel(ModelPart root) {
+    super(root);
+  }
 
-    public static LayerDefinition createLayer() {
-        MeshDefinition meshdefinition = new MeshDefinition();
-        PartDefinition partdefinition = meshdefinition.getRoot();
+  public static LayerDefinition createLayer() {
+    MeshDefinition meshdefinition = new MeshDefinition();
+    PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition helmet = partdefinition.addOrReplaceChild("helmet", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.5F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
-                .texOffs(25, 5).addBox(-5.5F, -7.8F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-                .texOffs(25, 0).addBox(4.5F, -7.8F, 0.0F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
-                .texOffs(25, 5).addBox(6.5F, -8.8F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+    PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.5F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+        .texOffs(25, 5).addBox(-5.5F, -7.8F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+        .texOffs(25, 0).addBox(4.5F, -7.8F, 0.0F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
+        .texOffs(25, 5).addBox(6.5F, -8.8F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-        return LayerDefinition.create(meshdefinition, 35, 16);
-    }
+    return LayerDefinition.create(meshdefinition, 35, 16);
+  }
 }
